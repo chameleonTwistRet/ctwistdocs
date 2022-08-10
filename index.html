@@ -2,14 +2,20 @@
 <html lang="en">
     <head>
         <script>
-          var rand = Math.floor(Math.random() * 101);
-          var dalls = "";
-          if(rand < 10.0){
-            dalls = "gooba :D";
-          }
-          else if(rand > 10.0){
-            dalls= "goobagooba";
-          }
+            function intwrap(num, limit){
+                while (num < limit){
+                    num -= limit
+                }
+                return num
+            }
+            
+            var options = 15;
+            document.getElementById("imagur").style.visibility = "visible";
+            var balls = Math.floor(Math.random() * 100)
+            var looped = intwrap(balls, options);
+            var galls = "";
+            galls = "https://chameleontwistret.github.io/ctwistdocs.github.io/assets/img/ext/banner" + String(looped) + ".png";
+            document.getElementById('imagur').src = galls;
         </script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -49,7 +55,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <img src="" id="imagur" width="200" height="200">
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
                 <!-- Icon Divider-->
