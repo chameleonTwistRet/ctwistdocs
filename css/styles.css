@@ -604,12 +604,11 @@ progress {
   height: auto;
 }
 
-.img-awesome {
-  max-width: 100%;
-  height: auto;
-}
-.img-awesome:hover p{
-    
+.centerrr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .img-thumbnail {
@@ -11298,6 +11297,15 @@ textarea.form-control-lg {
 html {
   height: 100%;
   scroll-padding-top: calc(4.5rem - 1px);
+}
+
+
+.hexis {
+  text-transform:uppercase; 
+  border-radius: 25px;
+  padding: 5px;
+  background-color: #0a0a0aFF;
+  color: #FFFFFFFF;
 }
 
 .page-section {
