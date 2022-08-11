@@ -8,14 +8,14 @@
         <!-- TITLE -->
         <title>Chameleon Twist Documentation</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="/assets/Davy.ico" />
+        <link rel="icon" type="image/x-icon" href="https://chameleontwistret.github.io/ctwistdocs/assets/Davy.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/css/styles.css" rel="stylesheet" />
+        <link href="https://chameleontwistret.github.io/ctwistdocs/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -75,12 +75,12 @@
                 <h2 class="text-center text-secondary mb-0">Debug</h2>
                 <div>
                     <p class="text-center" style="justify-content:space-evenly;">In Chameleon Twist, there exists a nulled out flag for a debug mode. At the hex address <code style="color:#000000">0x800f06b0</code>, in normal gameplay, the default value is <code style="color:#ff3737">0xFFFFFFFF</code>. However, if the value is set to <code style="color:#379a37">0x00000000</code>, then the debug menu will be able to be triggered. <br> To trigger debug mode from here, go into Story Mode and start a level. While holding <span class="hexis">L</span>, in order, press <span class="hexis">DPAD UP, DPAD DOWN, DPAD LEFT,</span> and <span class="hexis">DPAD RIGHT</span>.<br> The value will now be <code style="color:#379a37">0x00000001</code>. Because of this, and since you are still holding <span class="hexis">L</span>, this will reveal the debug menu.<br>
-                    <img src="/assets/img/sc/sc0.png"><br>
+                    <img src="https://chameleontwistret.github.io/ctwistdocs/assets/img/sc/sc0.png"><br>
                     With the menu now up, your controls will change as well.<br> The <span class="hexis">DPAD</span> and <span class="hexis">3DSTICK</span> both control the player's <span style="color:#FF0000">x</span> and <span style="color:#0000FF">z</span>, with horizontal controlling <span style="color:#FF0000">x</span> and vertical controlling <span style="color:#0000FF">z</span>. The <span style="color:#00D800">y</span> is controlled by <span class="hexis">C UP & C Down</span> respectively.<br>
                     <span class="hexis">C LEFT & C RIGHT</span> control the room index, warping you to the entrance/exit. If rooms exist outside of the normal room limits, they are not accessible because the room limits wrap at the end. To access those, manual editing will have to be done.<br>
                     On the left, there is a GUI. The first word is the internal name of the level. The second number is the Room Id. The next 3 numbers are each position values for the player. The last number is thought to be the distance the camera is from the player.<br>
                     On the right, there is a list of flags per level. These flags are for level events such as doors closing, or a crown requirement being met. These flags save  with your file and can be abused to make... <i>silly</i> situations.<br>
-                    <img src="/assets/img/sc/sc1.png"><br>
+                    <img src="https://chameleontwistret.github.io/ctwistdocs/assets/img/sc/sc1.png"><br>
                     The no-clp movement goes by increments of 100, but using the <span class="hexis">3DSTICK</span>, you can move in smaller increments with your player speed.<br>
                     While in debug mode, rooms are surrounded by a collision box, and field segments are surrounded by a checkpoint box. Level collision still applies, however.<br>
                     Also while in debug mode, if you press <span class="hexis">START</span>, you can change the current camera angle. The angles in order are TOP DOWN, SIDE VIEW 1, SIDE VIEW 2, and then back to normal.<br>
