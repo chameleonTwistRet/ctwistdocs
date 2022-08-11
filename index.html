@@ -29,8 +29,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" onClick="location.href='https://chameleontwistret.github.io/ctwistdocs/assets/pages/games/list.html'">Games</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" onClick="location.href=''">The Project</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" onClick="location.href=''">The Team</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" onClick="location.href='https://chameleontwistret.github.io/ctwistdocs/assets/pages/project/project.html'">The Project</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" onClick="location.href='https://chameleontwistret.github.io/ctwistdocs/assets/pages/team/team.html'">The Team</a></li>
                     </ul>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                     var funnies = ["JSS, You have no idea what you did.", "shoutouts to my homies back in twistcord",
                                   "they do the fnuny gahgahah", "High Octane Screaming Action? More lik-"]
                     var balls = Math.floor(Math.random() * 100)
-                    var looped = intwrap(balls, funnies.length - 1);
+                    var looped = intwrap(balls, funnies.length) - 1;
                     var galls = funnies[looped];
                     ouf.innerHTML = galls
                 </script>
