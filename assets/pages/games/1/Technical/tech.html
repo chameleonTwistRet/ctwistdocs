@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- TITLE -->
-        <title>Chameleon Twist Documentation</title>
+        <title>Chameleon Twist - Technical</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="https://chameleontwistret.github.io/ctwistdocs/assets/Davy.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -18,6 +18,55 @@
         <link href="https://chameleontwistret.github.io/ctwistdocs/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <script>
+            function addrswitch(ver = "JP"){
+            addrs = [];
+            if(ver == "JP"){
+                document.getElementById("us1").style.background = "#ff9a9a";
+                document.getElementById("jp").style.background = "#ff9a00";
+                document.getElementById("us2").style.background = "#9a9aff";
+
+                addrs[0] = "0x800F06B0";
+            }
+            else if(ver == "US0"){
+                document.getElementById("us1").style.background = "#ff9a00";
+                document.getElementById("jp").style.background = "#9aff9a";
+                document.getElementById("us2").style.background = "#9a9aff";
+                
+                addrs[0] = "0x800EA084";
+            }
+            else if(ver == "US1"){
+                document.getElementById("us1").style.background = "#ff9a9a";
+                document.getElementById("jp").style.background = "#9aff9a";
+                document.getElementById("us2").style.background = "#ff9a00";
+                
+                addrs[0] = "0x800EDC80";
+            }
+            document.getElementById("debugAddr").innerHTML = addrs[0];
+            }
+            
+            function mousemove(event){
+            var mX = 0;
+            var mY = 0;
+            var mcX = 0;
+            var mcY = 0;
+            
+            mX = event.pageX;
+            mY = event.pageY;
+            mcX = event.clientX;
+            mcY = event.clientY;
+            
+   
+            console.log(
+            "pageX: ",event.pageX, 
+            "pageY: ", event.pageY, 
+            "clientX: ", event.clientX, 
+            "clientY:", event.clientY)
+            }
+            
+            window.addEventListener('mousemove', mousemove);
+            
+        </script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -38,8 +87,7 @@
         
         <section class="page-section portfolio">
             <p></p>
-            <h2 class="page-section-heading text-center text-secondary mb-0">Chameleon Twist - JP</h2>
-            <h2 class="text-center text-secondary mb-0">(Most info here is shared, but this is the most documented version. Get over it. (will be split later))</h2>
+            <h2 class="page-section-heading text-center text-secondary mb-0">Chameleon Twist</h2>
             <section class="page-section portfolio" id="portfolio">
                 <div class="container">
                     <!-- Portfolio Section Heading-->
@@ -74,7 +122,7 @@
             <div id="Debug">
                 <h2 class="text-center text-secondary mb-0">Debug</h2>
                 <div>
-                    <p class="text-center" style="justify-content:space-evenly;">In Chameleon Twist, there exists a nulled out flag for a debug mode. At the hex address <code style="color:#000000">0x800f06b0</code>, in normal gameplay, the default value is <code style="color:#ff3737">0xFFFFFFFF</code>. However, if the value is set to <code style="color:#379a37">0x00000000</code>, then the debug menu will be able to be triggered. <br> To trigger debug mode from here, go into Story Mode and start a level. While holding <span class="hexis">L</span>, in order, press <span class="hexis">DPAD UP, DPAD DOWN, DPAD LEFT,</span> and <span class="hexis">DPAD RIGHT</span>.<br> The value will now be <code style="color:#379a37">0x00000001</code>. Because of this, and since you are still holding <span class="hexis">L</span>, this will reveal the debug menu.<br>
+                    <p class="text-center" style="justify-content:space-evenly;">In Chameleon Twist, there exists a nulled out flag for a debug mode. At the hex address <code id="debugAddr" style="color:#000000"></code>, in normal gameplay, the default value is <code style="color:#ff3737">0xFFFFFFFF</code>. However, if the value is set to <code style="color:#379a37">0x00000000</code>, then the debug menu will be able to be triggered. <br> To trigger debug mode from here, go into Story Mode and start a level. While holding <span class="hexis">L</span>, in order, press <span class="hexis">DPAD UP, DPAD DOWN, DPAD LEFT,</span> and <span class="hexis">DPAD RIGHT</span>.<br> The value will now be <code style="color:#379a37">0x00000001</code>. Because of this, and since you are still holding <span class="hexis">L</span>, this will reveal the debug menu.<br>
                     <img src="https://chameleontwistret.github.io/ctwistdocs/assets/img/sc/sc0.png"><br>
                     With the menu now up, your controls will change as well.<br> The <span class="hexis">DPAD</span> and <span class="hexis">3DSTICK</span> both control the player's <span style="color:#FF0000">x</span> and <span style="color:#0000FF">z</span>, with horizontal controlling <span style="color:#FF0000">x</span> and vertical controlling <span style="color:#0000FF">z</span>. The <span style="color:#00D800">y</span> is controlled by <span class="hexis">C UP & C Down</span> respectively.<br>
                     <span class="hexis">C LEFT & C RIGHT</span> control the room index, warping you to the entrance/exit. If rooms exist outside of the normal room limits, they are not accessible because the room limits wrap at the end. To access those, manual editing will have to be done.<br>
@@ -100,5 +148,24 @@
                 </div>
             </div>
         </section>
+        <div id="vbar" style="position: fixed;left: 0;top: 25%;height: 250px;width: 125px;border-radius:5px;background: #9a9a9a;">
+            <div id="us1" style="position: relative; left: 2%;top: 2%;height: 30.5%;width: 95%;border-radius:5px;background: #ff9a9a; cursor: pointer;" onClick="addrswitch('US0')">
+                <p class="text-center" style="line-height: 24px"><br>US 1.0</p>
+            </div>
+            <div id="jp" style="position: relative; left: 2%;top: 4%;height: 30.5%;width: 95%;border-radius:5px;background: #9aff9a; cursor: pointer;" onClick="addrswitch('JP')">
+                <p class="text-center" style="line-height: 24px"><br>JP</p>
+            </div>
+            <div id="us2" style="position: relative; left: 2%;top: 6%;height: 30.5%;width: 95%;border-radius:5px;background: #9a9aff; cursor: pointer;" onClick="addrswitch('US1')">
+                <p class="text-center" style="line-height: 24px"><br>US 1.1 (Rev A)</p>
+            </div>
+            <div style="position: relative;left: 0;top: -115%;height: 65px;width: 200px;border-radius:5px;background: #9a9a9a; cursor: pointer;">
+                <p class="text-center" style="line-height: 24px"><br>Version Addresses</p>
+            </div>
+        </div>
+        <script>
+            if(document.getElementById("debugAddr").innerHTML == ""){
+                addrswitch('JP')
+            };
+        </script>
     </body>
 </html>
