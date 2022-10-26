@@ -20,29 +20,34 @@
     <body id="page-top">
         <script>
             function addrswitch(ver = "JP"){
-            addrs = [];
+            var addrs = [["debugAddr",["0x800F06B0", "0x800EA084", "0x800EDC80"]],
+                        ];
+            var val = -1;
+            
             if(ver == "JP"){
+                val = 0;
                 document.getElementById("us1").style.background = "#ff9a9a";
                 document.getElementById("jp").style.background = "#ff9a00";
                 document.getElementById("us2").style.background = "#9a9aff";
-
-                addrs[0] = "0x800F06B0";
             }
             else if(ver == "US0"){
+                val = 1;
                 document.getElementById("us1").style.background = "#ff9a00";
                 document.getElementById("jp").style.background = "#9aff9a";
                 document.getElementById("us2").style.background = "#9a9aff";
-                
-                addrs[0] = "0x800EA084";
             }
             else if(ver == "US1"){
+                val = 2
                 document.getElementById("us1").style.background = "#ff9a9a";
                 document.getElementById("jp").style.background = "#9aff9a";
                 document.getElementById("us2").style.background = "#ff9a00";
-                
-                addrs[0] = "0x800EDC80";
             }
-            document.getElementById("debugAddr").innerHTML = addrs[0];
+            var k = 0;
+            while(k < addrs.length){
+                var each = addrs[k];
+                document.getElementById(each[0]).innerHTML = each[1][val];
+                k += 1;
+            }
             }
             
             function mousemove(event){

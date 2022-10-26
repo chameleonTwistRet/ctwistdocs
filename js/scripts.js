@@ -7,7 +7,7 @@
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
+/*window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -51,4 +51,16 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-});
+});im gonna assume we dont need this and if we do we can uncomment this
+*/
+
+function intwrap(num, limit) {
+    "use strict";
+    while (num > limit) {
+        num -= limit;
+    }
+    while (num < limit) {
+        num += limit;
+    }
+    return num;
+}

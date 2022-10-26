@@ -1,44 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <!-- TITLE -->
-        <title>Oops!</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="https://chameleontwistret.github.io/ctwistdocs/assets/Davy.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="https://chameleontwistret.github.io/ctwistdocs/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <section class="page-section portfolio" id="portfolio">
-            <div class="row justify-content-center">
-                <img src="https://chameleontwistret.github.io/ctwistdocs/assets/img/ext/404.jpg" style="width: auto">
-                <p id="lol" class="text-center"></p>
-            </div>
-        </section>
-        <script>
-            var ouf = document.getElementById("lol")
-            function intwrap(num, limit){
-                var boing = num;
-                while (boing > limit){
-                    boing -= limit;
-                }
-                return boing;
+<head>
+    <script src="js/scripts.js"></script>
+    <meta charset="utf-8">
+    <!-- TITLE -->
+    <title>Oops!</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="https://chameleontwistret.github.io/ctwistdocs/assets/Davy.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body, p {
+                width: 95%;
             }
-            var funnies = ["WHERE AM I", "these hands will never be clean of blood",
-                           "mfw AL", "nice one doofus", "welp"]
-            var balls = Math.floor(Math.random() * 100)
-            var looped = intwrap(balls, funnies.length) - 1;
-            var galls = funnies[looped];
-            ouf.innerHTML = galls
-        </script>
-    </body>
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <img src="https://chameleontwistret.github.io/ctwistdocs/assets/img/ext/404.jpg" style="width: auto">
+    <h1>Page Not Found</h1>
+    <p id="lol"></p>
+    <script>
+        var funnies = ["WHERE AM I", "these hands will never be clean of blood",
+        "mfw AL", "nice one doofus", "welp", "func_800B3E7C"]
+        var rand = Math.floor(Math.random() * 100)
+        var looped = intwrap(rand, funnies.length  - 1);
+        console.log(looped);
+        var result = funnies[looped];
+        document.getElementById("lol").innerHTML = result
+    </script>
+</body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
